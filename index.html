@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IHK Koblenz | Regionales Gründungs- und Wachstumsdashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><div class="partner-logos"><div class="logo-lockup"><img class="official-logo ihk-logo" src="assets/ihk-koblenz-logo.svg" alt="IHK Koblenz"></div><div class="logo-divider"></div><div class="logo-lockup"><img class="official-logo whu-logo" src="assets/whu-logo.svg" alt="WHU – Otto Beisheim School of Management"></div></div><div class="brand-copy"><div class="eyebrow">Gemeinsames Datenprojekt</div><h1>Regionales Gründungs- und Wachstumsdashboard</h1></div></div>
+      <div class="header-note"><span class="live-dot"></span> Datenstand Oktober 2026</div>
+    </header>
+    <main>
+      <section class="hero">
+        <div><div class="eyebrow accent">Perspektive IHK-Bezirk Koblenz</div><h2>Wo ist die Region besonders stark?</h2><p>Vergleichen Sie Gründungs- und Wachstumsmerkmale in den zehn Landkreisen und der Stadt Koblenz mit dem Rheinland-Pfalz-Benchmark und verfolgen Sie die Entwicklung einzelner Signale.</p></div>
+        <div class="hero-meta"><div class="meta-label">Abdeckung</div><strong>11 Gebiete</strong><span>2020–2024 · 8 Merkmale</span></div>
+      </section>
+      <section class="toolbar"><div><label for="metric">Merkmal</label><select id="metric"></select></div><div><label for="scenario">Datenbasis</label><select id="scenario"></select></div><div><label for="year">Vergleichsjahr</label><select id="year"></select></div></section>
+      <div class="scenario-note"><strong id="active-scenario"></strong><p id="method-note"></p></div>
+      <section class="overview-grid" id="overview"></section>
+      <section class="panel comparison"><div class="panel-head"><div><div class="eyebrow">01 · Gebietsüberblick</div><h3>Die Gebiete im Vergleich</h3></div><div class="legend"><span><i class="swatch positive"></i> Über Benchmark</span><span><i class="swatch negative"></i> Unter Benchmark</span></div></div><div class="heatmap" id="heatmap"></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">02 · Landkreisvergleich</div><h3 id="rank-title">Rangfolge nach Anteil 2024</h3></div><div class="benchmark-pill" id="benchmark-pill"></div></div><div class="ranked-list" id="ranked-list"></div></section>
+      <section class="detail-layout"><section class="panel detail-panel"><div class="panel-head"><div><div class="eyebrow">03 · Gebietsdetail</div><h3 id="detail-title"></h3></div><select id="district" aria-label="Gebiet auswählen"></select></div><div class="detail-summary" id="detail-summary"></div><div class="chart-wrap"><div class="y-label">Anteil auswertbarer Unternehmen</div><div class="line-chart" id="line-chart"></div></div><div class="chart-legend"><span>● Gebiet</span><span>● Rheinland-Pfalz</span></div></section><aside class="panel insight-panel"><div class="eyebrow">Signal zur Prüfung</div><h3 id="insight-title"></h3><p id="insight-copy"></p><div class="insight-rule"></div><div class="eyebrow">Was dieser Prototyp ermöglicht</div><ul><li>Stärken und Lücken auf Gebietsebene erkennen</li><li>Netzwerkinitiativen evidenzbasiert ausrichten</li><li>Unternehmen und Erfolgsbeispiele als Nächstes ergänzen</li></ul></aside></section>
+      <section class="panel coverage-panel"><div class="eyebrow">04 · Datenbasis &amp; Transparenz</div><h3 id="coverage-title"></h3><div class="coverage-grid" id="coverage"></div><p id="dependency-note"></p><details><summary>Methoden, Datenstand und Downloads</summary><p id="forecast-note"></p><p>Interpolation: gespeicherte Pipeline-Schätzungen für begrenzte interne Lücken bis drei Jahre. Das separate Pipeline-Szenario ergänzt gleichzeitige und rekursive Peer-Schätzungen; diese sind keine Prognosen. Szenariovergleiche nutzen jeweils die auswertbaren Unternehmen, daher können sich die Nenner ändern.</p><p>Definitionen: Scaler &gt;10 % und Wachstumsunternehmen &gt;20 % annualisiertes Dreijahreswachstum; mindestens 10 Beschäftigte zu Beginn. Kontinuierliches Wachstum: zusätzlich mindestens zwei Jahresraten &gt;20 %, sehr starkes Wachstum: mindestens zwei &gt;40 %. Gazellen/Etablierte und Scale-ups/Superstars teilen diese Gruppen nach Gründung innerhalb der letzten zehn Jahre bzw. davor. Fehlendes Gründungsjahr bleibt nicht auswertbar.</p><p id="population-note"></p><p><a href="regional_metrics.csv" download>Gebietskennzahlen · alle Szenarien (CSV)</a> · <a href="forecast_values.csv" download>Prognosewerte mit BvD-ID und Ankerjahr (CSV)</a> · <a href="metadata.json" download>Quelldaten &amp; Metadaten (JSON)</a></p></details></section>
+      <footer><span id="source-note"></span><span>2020–2024 · WHU × IHK Koblenz</span></footer>
+    </main>
+  </div>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>

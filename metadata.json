@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-10-22T07:43:00.411111+00:00",
+  "pipeline_generated_at": "2026-10-21T18:07:33.546321+00:00",
+  "source_export_date": "2026-10-19",
+  "source_data_update": "2026-10-16",
+  "source_file": "pipeline/data/processed/09_orbis_rlp_employment_imputed.csv",
+  "source_sha256": "c97ea34410e033d082cf959f74018c4569f12b3e24e2c189d7772889d42fdba1",
+  "population_counts": {
+    "all_source_records": 55406,
+    "geographically_matched_records": 53703,
+    "pending_geography_records": 1703,
+    "geography_review_cases": 290,
+    "ihk_koblenz_records": 21118,
+    "growth_sample_records": 6516,
+    "ihk_records_outside_growth_sample": 14602,
+    "growth_long_records": 268515,
+    "gap_records": 247794,
+    "companies_with_gaps": 51041,
+    "enrichment_source_matches": 992
+  },
+  "forecast_method": "last_observation",
+  "forecast_note": "Historische Sensitivitätsrechnung: letzter früher berichteter Wert; Prognosehorizont 1–7 Jahre. Keine rückwirkende Nutzung von 2025/2026. Mehrjahresprognosen sind nicht separat validiert. Interpolation nutzt spätere Anker und ist retrospektiv.",
+  "share_note": "Zähler: Unternehmen mit Merkmal. Nenner: Unternehmen mit auswertbarer Klassifikation; mindestens 10 Beschäftigte am Beginn des Dreijahresfensters. Nenner unterscheiden sich nach Jahr, Merkmal und Szenario.",
+  "population_note": "RLP umfasst alle geografisch zugeordneten Unternehmen im Export. Unternehmensdaten, keine Vollerhebung und keine Betriebsstättenstatistik. Gebietsvergleich: zehn Landkreise und Stadt Koblenz."
+}
